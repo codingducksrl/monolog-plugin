@@ -14,8 +14,10 @@ class CodingDuckLogger {
 
         $autoSession = isset($config["autoSession"]) ? $config["autoSession"] : false;
 
+        $projectRoot = isset($config["projectRoot"]) ? $config["projectRoot"] : "";
+
         try {
-            $logger->pushProcessor(new CodingDuckProcessor($clientCredentials["clientID"], $clientCredentials["clientSecret"], $config["projectRoot"], $autoSession));
+            $logger->pushProcessor(new CodingDuckProcessor($clientCredentials["clientID"], $clientCredentials["clientSecret"], $projectRoot, $autoSession));
 
             $host = $config["host"];
             $port = intval("".$config["port"]);
