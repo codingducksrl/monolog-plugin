@@ -2,6 +2,7 @@
 
 namespace Codingduck\Logger;
 use Monolog\Processor\ProcessorInterface;
+use Ramsey\Uuid\Uuid;
 
 class CodingDuckProcessor implements ProcessorInterface{
 
@@ -15,7 +16,7 @@ class CodingDuckProcessor implements ProcessorInterface{
         $this->clientID = $clientID;
         $this->clientSecret = $clientSecret;
         $this->projectRoot = $projectRoot;
-        $this->transaction = \Ramsey\Uuid\Uuid::uuid4()->toString();
+        $this->transaction = Uuid::uuid4()->toString();
         $this->session = null;
         if($autoSession){
             session_name("coding_duck_logger_session");
@@ -35,7 +36,7 @@ class CodingDuckProcessor implements ProcessorInterface{
         $raw["level"] = $record["level_name"];
         $raw["message"] = $record["message"];
         $raw["timestamp"] = $record["datetime"];//.format(DateTimeInterface::RFC3339_EXTENDED);
-        $raw["id"] = \Ramsey\Uuid\Uuid::uuid4()->toString();
+        $raw["id"] = Uuid::uuid4()->toString();
         $raw["transaction"] = $this->transaction;
 
         if(isset($raw["session"])){
@@ -108,10 +109,6 @@ class CodingDuckProcessor implements ProcessorInterface{
             }
 
         }
-
-
-
-
 
         return [
             "log" => base64_encode(json_encode($raw)),

@@ -14,6 +14,8 @@
   },
   "require": {
     "php": "^7.4|^8.0",
-    "monolog/monolog": "^2.2"
+    "monolog/monolog": "^2.2",
+    "ext-json": "*",
+    "ramsey/uuid": "^4.1"
   }
 }
