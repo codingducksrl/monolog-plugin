@@ -1,0 +1,15 @@
+{
+  "name": "src/monolog-plugin",
+  "version": "1.0.0",
+  "description": "Coding duck specific monolog logger implementation",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Guglielmo Frati"
+    }
+  ],
+  "require": {
+    "monolog/monolog": "^2.2"
+  }
+}
