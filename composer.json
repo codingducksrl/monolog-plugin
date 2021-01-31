@@ -1,6 +1,6 @@
 {
   "name": "codingduck/monolog-plugin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Coding duck specific monolog logger implementation",
   "minimum-stability": "stable",
   "license": "proprietary",
@@ -9,6 +9,9 @@
       "name": "Guglielmo Frati"
     }
   ],
+  "autoload": {
+    "psr-4": {"Codingduck\\": "src/"}
+  },
   "require": {
     "php": "^7.4|^8.0",
     "monolog/monolog": "^2.2"
