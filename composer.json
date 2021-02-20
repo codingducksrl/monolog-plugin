@@ -1,6 +1,6 @@
 {
   "name": "codingduck/monolog-plugin",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Coding duck specific monolog logger implementation",
   "minimum-stability": "stable",
   "license": "proprietary",
