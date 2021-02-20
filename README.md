@@ -1,6 +1,9 @@
 # Coding duck monolog plugin
 Simple monolog plugin to use with the coding duck's logging system.
 
+# Installation
+`composer install codingduck/monolog-plugin`
+
 ## Usage
 ### Standalone
 Standalone usage without any kind of framework.
