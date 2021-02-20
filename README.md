@@ -2,7 +2,7 @@
 Simple monolog plugin to use with the coding duck's logging system.
 
 # Installation
-`composer install codingduck/monolog-plugin`
+`composer require codingduck/monolog-plugin`
 
 ## Usage
 ### Standalone
